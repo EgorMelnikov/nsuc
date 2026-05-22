@@ -1,10 +1,17 @@
 <style>
   .nsuc-about {
     font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
     color: #1a1a1a;
     max-width: 860px;
     margin: 0 auto;
     line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .nsuc-about {
+      font-size: 1.5rem;
+    }
   }
 
   .nsuc-about h2 {
@@ -84,7 +91,7 @@
   .nsuc-card strong {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.75em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #00558b;
@@ -93,7 +100,6 @@
 
   .nsuc-card p {
     margin: 0;
-    font-size: 0.95rem;
   }
 
   .nsuc-safety-box {
@@ -110,23 +116,34 @@
 
   .nsuc-sponsors {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
   }
 
   .nsuc-sponsor-item {
-    border: 1px solid #dde6ed;
+    background: #f0f7fc;
+    border-left: 4px solid #00558b;
     border-radius: 4px;
-    padding: 0.9rem 1rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .nsuc-sponsor-item strong {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #00558b;
+    margin-bottom: 0.3rem;
   }
 
   .nsuc-sponsor-item a {
     display: block;
     color: #00558b;
     text-decoration: none;
-    font-size: 0.85rem;
-    margin: 0.15rem 0 0.5rem;
+    font-size: 0.8em;
+    margin-bottom: 0.4rem;
   }
 
   .nsuc-sponsor-item a:hover {
@@ -135,7 +152,6 @@
 
   .nsuc-sponsor-item p {
     margin: 0;
-    font-size: 0.9rem;
   }
 
   .nsuc-cta {
@@ -149,11 +165,10 @@
 
   .nsuc-cta p {
     margin: 0 0 0.4rem;
-    font-size: 1rem;
   }
 
   .nsuc-cta a {
-    color: #7ec8e3;
+    color: #ffffff;
     font-weight: 700;
   }
 </style>

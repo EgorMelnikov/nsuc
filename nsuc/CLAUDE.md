@@ -13,6 +13,7 @@ TidyHQ is a club/association management platform. Custom pages are built with HT
 | File | TidyHQ Page | Notes |
 |------|-------------|-------|
 | `about.html` | About the Club | Intro, history, meetings, competitions, safety, sponsors |
+| `trophy-fish-2026.html` | 2026 Trophy Fish | Species records table + Tony Leslie Trophy; source data in `Trophy Fish 2026.xlsx` |
 
 Pages are self-contained HTML snippets (no `<html>`/`<head>`/`<body>`) with a `<style>` block and a single root `<div class="nsuc-*">`. Ready to paste into TidyHQ's **Page Content** field.
 
