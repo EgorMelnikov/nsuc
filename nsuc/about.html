@@ -50,12 +50,18 @@
   }
 
   .nsuc-hero {
-    background: linear-gradient(135deg, #003f6b 0%, #00558b 60%, #0077b6 100%);
+    background: linear-gradient(rgba(0, 63, 107, 0.55), rgba(0, 63, 107, 0.7)),
+                url('https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/header.jpg') center/cover no-repeat;
     color: #fff;
     border-radius: 6px;
-    padding: 2.5rem 2rem;
+    padding: 4rem 2rem;
     margin-bottom: 2rem;
     text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .nsuc-hero h1 {
@@ -65,13 +71,70 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin: 0 0 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
   .nsuc-hero .tagline {
     font-size: 1rem;
-    opacity: 0.85;
+    opacity: 0.9;
     font-style: italic;
     margin: 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .nsuc-section-photo {
+    border-radius: 6px;
+    border: 3px solid #00558b;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    display: block;
+  }
+
+  .nsuc-photo-float-right {
+    float: right;
+    max-width: 280px;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  .nsuc-photo-float-left {
+    float: left;
+    max-width: 280px;
+    margin: 0 1.5rem 1rem 0;
+  }
+
+  .nsuc-photo-full {
+    width: 100%;
+  }
+
+  .nsuc-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .nsuc-photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid #00558b;
+  }
+
+  .nsuc-clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  @media (max-width: 600px) {
+    .nsuc-photo-float-right,
+    .nsuc-photo-float-left {
+      float: none;
+      max-width: 100%;
+      margin: 1rem 0;
+    }
   }
 
   .nsuc-cards {
@@ -182,16 +245,21 @@
 
   <!-- WHO WE ARE -->
   <h2>Who We Are</h2>
-  <p>
-    The North Shore Underwater Club (NSUC), also known as the North Shore Seahawks, is a non-profit
-    spearfishing club based on Sydney&rsquo;s Northern Beaches. Our principal purpose is the encouragement,
-    conduct and promotion of the sport of spearfishing.
-  </p>
-  <p>
-    Modern Australian spearfishing began in 1917, and North Shore has been part of that history since
-    our club records first began in 1952. We hold the record for the most consecutive Alliman Shield wins
-    in history and have always been committed to developing new divers and growing our community.
-  </p>
+  <div class="nsuc-clearfix">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/club-mag-1980.jpg"
+         alt="North Shore Underwater Club magazine cover, 1980"
+         class="nsuc-section-photo nsuc-photo-float-right">
+    <p>
+      The North Shore Underwater Club (NSUC), also known as the North Shore Seahawks, is a non-profit
+      spearfishing club based on Sydney&rsquo;s Northern Beaches. Our principal purpose is the encouragement,
+      conduct and promotion of the sport of spearfishing.
+    </p>
+    <p>
+      Modern Australian spearfishing began in 1917, and North Shore has been part of that history since
+      our club records first began in 1952. We hold the record for the most consecutive Alliman Shield wins
+      in history and have always been committed to developing new divers and growing our community.
+    </p>
+  </div>
 
   <div class="nsuc-cards">
     <div class="nsuc-card">
@@ -227,6 +295,15 @@
   <!-- COMPETITIONS -->
   <h2>Competitions</h2>
 
+  <div class="nsuc-photo-grid">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/vintage-big-catch.jpg"
+         alt="Vintage NSUC diver with a large catch on the boat">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/vintage-divers-cars.jpg"
+         alt="Vintage NSUC divers showing their catch by classic cars">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/vintage-giant-fish.jpg"
+         alt="NSUC member with a record-sized fish">
+  </div>
+
   <h3>Alliman Shield</h3>
   <p>
     The Sydney Metro Alliman Shield is a monthly inter-club fin fish spearfishing competition held on the
@@ -251,15 +328,25 @@
   </p>
 
   <h3>NSUC Trophies</h3>
-  <p>
-    The club maintains trophy records across 18 species categories, including Kingfish, Snapper, Mulloway,
-    Spanish Mackerel, and more. The prestigious <strong>Tony Leslie Trophy</strong> is awarded annually
-    to the member landing the largest pelagic fish. Trophy claims must be made to the Sports Secretary
-    within one week of capture and require certified scales, photographic evidence, and a witness.
-  </p>
+  <div class="nsuc-clearfix">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/diver-catch-boat.jpg"
+         alt="NSUC diver with catch on the water"
+         class="nsuc-section-photo nsuc-photo-float-left"
+         style="max-width: 240px;">
+    <p>
+      The club maintains trophy records across 18 species categories, including Kingfish, Snapper, Mulloway,
+      Spanish Mackerel, and more. The prestigious <strong>Tony Leslie Trophy</strong> is awarded annually
+      to the member landing the largest pelagic fish. Trophy claims must be made to the Sports Secretary
+      within one week of capture and require certified scales, photographic evidence, and a witness.
+    </p>
+  </div>
 
   <!-- SAFETY -->
   <h2>Safety</h2>
+  <div class="nsuc-clearfix">
+    <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/vintage-beach-catch.jpg"
+         alt="NSUC diver with catch on the beach"
+         class="nsuc-section-photo nsuc-photo-float-right">
   <p>Safety is the foundation of everything we do. Every member is expected to:</p>
   <ul>
     <li>Always dive with a buddy using the <strong>&ldquo;one up, one down&rdquo;</strong> approach &mdash; one diver watches while the other dives.</li>
@@ -273,6 +360,7 @@
     It can occur without warning during ascent when oxygen levels drop critically low. Avoid hyperventilation,
     always dive with a vigilant buddy, and know how to respond: bring the diver to the surface immediately,
     keep their airway clear, blow air on their cheeks to stimulate breathing, and call emergency services.</p>
+  </div>
   </div>
 
   <!-- REGULATIONS -->
@@ -305,6 +393,11 @@
       <p>One of Australia&rsquo;s largest spearfishing suppliers. USFA members receive a 10% discount.</p>
     </div>
   </div>
+
+  <!-- CLUB PHOTOS -->
+  <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/pics/team-kingfish.jpg"
+       alt="NSUC team with an impressive kingfish haul"
+       class="nsuc-section-photo nsuc-photo-full">
 
   <!-- CONTACT -->
   <div class="nsuc-cta">
