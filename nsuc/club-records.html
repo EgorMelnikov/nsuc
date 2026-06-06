@@ -48,7 +48,7 @@
 
   .nsuc-records-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin: 1rem 0 2rem;
   }
@@ -58,18 +58,19 @@
     border-left: 4px solid #00558b;
     border-radius: 6px;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
   }
 
   .nsuc-record-photo {
-    width: 100%;
-    height: 130px;
+    flex: 0 0 160px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #dde9f3;
     border-radius: 4px;
-    margin-bottom: 0.75rem;
     overflow: hidden;
   }
 
@@ -87,6 +88,10 @@
     box-sizing: border-box;
   }
 
+  .nsuc-record-info {
+    flex: 1;
+  }
+
   .nsuc-record-species {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
@@ -94,7 +99,7 @@
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.25rem;
   }
 
   .nsuc-record-weight {
@@ -102,12 +107,12 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
   }
 
   .nsuc-record-member {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.85rem;
+    font-size: 1.4rem;
     color: #555;
   }
 
@@ -133,7 +138,7 @@
       font-size: 1.5rem;
     }
     .nsuc-records-grid {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: 1fr;
     }
   }
 
@@ -198,49 +203,61 @@
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/kingfish.png" alt="Kingfish">
       </div>
-      <div class="nsuc-record-species">Kingfish</div>
-      <div class="nsuc-record-weight">35 kg</div>
-      <div class="nsuc-record-member">P. Sheppard</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Kingfish</div>
+        <div class="nsuc-record-weight">35 kg</div>
+        <div class="nsuc-record-member">P. Sheppard</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/mulloway.png" alt="Mulloway">
       </div>
-      <div class="nsuc-record-species">Mulloway</div>
-      <div class="nsuc-record-weight">34.4 kg</div>
-      <div class="nsuc-record-member">A. Moderer</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Mulloway</div>
+        <div class="nsuc-record-weight">34.4 kg</div>
+        <div class="nsuc-record-member">A. Moderer</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/cobia.png" alt="Cobia">
       </div>
-      <div class="nsuc-record-species">Cobia</div>
-      <div class="nsuc-record-weight">29.95 kg</div>
-      <div class="nsuc-record-member">A. Price</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Cobia</div>
+        <div class="nsuc-record-weight">29.95 kg</div>
+        <div class="nsuc-record-member">A. Price</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/spanish.png" alt="Spanish Mackerel">
       </div>
-      <div class="nsuc-record-species">Spanish Mackerel</div>
-      <div class="nsuc-record-weight">26.2 kg</div>
-      <div class="nsuc-record-member">N. Blyth</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Spanish Mackerel</div>
+        <div class="nsuc-record-weight">26.2 kg</div>
+        <div class="nsuc-record-member">N. Blyth</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/dolphin_fish.png" alt="Dolphin Fish">
       </div>
-      <div class="nsuc-record-species">Dolphin Fish</div>
-      <div class="nsuc-record-weight">8.8 kg</div>
-      <div class="nsuc-record-member">J. Williams</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Dolphin Fish</div>
+        <div class="nsuc-record-weight">8.8 kg</div>
+        <div class="nsuc-record-member">J. Williams</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/snapper.png" alt="Snapper">
       </div>
-      <div class="nsuc-record-species">Snapper</div>
-      <div class="nsuc-record-weight">7.3 kg</div>
-      <div class="nsuc-record-member">J. Howard</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Snapper</div>
+        <div class="nsuc-record-weight">7.3 kg</div>
+        <div class="nsuc-record-member">J. Howard</div>
+      </div>
     </div>
   </div>
 
@@ -250,80 +267,91 @@
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/bonito.png" alt="Bonito">
       </div>
-      <div class="nsuc-record-species">Bonito</div>
-      <div class="nsuc-record-weight">5.24 kg</div>
-      <div class="nsuc-record-member">A. Scott</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Bonito</div>
+        <div class="nsuc-record-weight">5.24 kg</div>
+        <div class="nsuc-record-member">A. Scott</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/rock_blackfish.png" alt="Rock Blackfish">
       </div>
-      <div class="nsuc-record-species">Rock Blackfish</div>
-      <div class="nsuc-record-weight">5.15 kg</div>
-      <div class="nsuc-record-member">D. Fitzgerald</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Rock Blackfish</div>
+        <div class="nsuc-record-weight">5.15 kg</div>
+        <div class="nsuc-record-member">D. Fitzgerald</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/salmon.png" alt="Salmon">
       </div>
-      <div class="nsuc-record-species">Salmon</div>
-      <div class="nsuc-record-weight">4.16 kg</div>
-      <div class="nsuc-record-member">G. Kroie</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Salmon</div>
+        <div class="nsuc-record-weight">4.16 kg</div>
+        <div class="nsuc-record-member">G. Kroie</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/blue_morwong.png" alt="Blue Morwong">
       </div>
-      <div class="nsuc-record-species">Blue Morwong</div>
-      <div class="nsuc-record-weight">3.42 kg</div>
-      <div class="nsuc-record-member">C. Maloney</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Blue Morwong</div>
+        <div class="nsuc-record-weight">3.42 kg</div>
+        <div class="nsuc-record-member">C. Maloney</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/red_morwong.png" alt="Red Morwong">
       </div>
-      <div class="nsuc-record-species">Red Morwong</div>
-      <div class="nsuc-record-weight">2.335 kg</div>
-      <div class="nsuc-record-member">M. Walsh</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Red Morwong</div>
+        <div class="nsuc-record-weight">2.335 kg</div>
+        <div class="nsuc-record-member">M. Walsh</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/red_rock_cod.png" alt="Red Rock Cod">
       </div>
-      <div class="nsuc-record-species">Red Rock Cod</div>
-      <div class="nsuc-record-weight">2.172 kg</div>
-      <div class="nsuc-record-member">A. Price</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Red Rock Cod</div>
+        <div class="nsuc-record-weight">2.172 kg</div>
+        <div class="nsuc-record-member">A. Price</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
-        <svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="28,55 0,28 0,82" fill="#8a9fb5"/>
-          <ellipse cx="118" cy="55" rx="94" ry="40" fill="#6e8fa8"/>
-          <polygon points="78,15 118,0 158,15" fill="#8a9fb5"/>
-          <polygon points="100,72 122,92 152,76" fill="#8a9fb5"/>
-          <circle cx="182" cy="48" r="11" fill="#cddbe8"/>
-          <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
-        </svg>
+        <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/luderick.png" alt="Luderick">
       </div>
-      <div class="nsuc-record-species">Luderick</div>
-      <div class="nsuc-record-weight">1.938 kg</div>
-      <div class="nsuc-record-member">A. Price</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Luderick</div>
+        <div class="nsuc-record-weight">1.938 kg</div>
+        <div class="nsuc-record-member">A. Price</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/bream.png" alt="Bream">
       </div>
-      <div class="nsuc-record-species">Bream</div>
-      <div class="nsuc-record-weight">1.69 kg</div>
-      <div class="nsuc-record-member">M. Bonnici</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Bream</div>
+        <div class="nsuc-record-weight">1.69 kg</div>
+        <div class="nsuc-record-member">M. Bonnici</div>
+      </div>
     </div>
     <div class="nsuc-record-card">
       <div class="nsuc-record-photo">
         <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/goatfish.png" alt="Goatfish">
       </div>
-      <div class="nsuc-record-species">Goatfish</div>
-      <div class="nsuc-record-weight">1.655 kg</div>
-      <div class="nsuc-record-member">J. Chan</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Goatfish</div>
+        <div class="nsuc-record-weight">1.655 kg</div>
+        <div class="nsuc-record-member">J. Chan</div>
+      </div>
     </div>
     <div class="nsuc-record-card nsuc-record-vacant">
       <div class="nsuc-record-photo">
@@ -336,9 +364,11 @@
           <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
         </svg>
       </div>
-      <div class="nsuc-record-species">Sand Whiting</div>
-      <div class="nsuc-record-weight">Vacant</div>
-      <div class="nsuc-record-member">&mdash;</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Sand Whiting</div>
+        <div class="nsuc-record-weight">Vacant</div>
+        <div class="nsuc-record-member">&mdash;</div>
+      </div>
     </div>
     <div class="nsuc-record-card nsuc-record-vacant">
       <div class="nsuc-record-photo">
@@ -351,9 +381,11 @@
           <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
         </svg>
       </div>
-      <div class="nsuc-record-species">Silver Trevally</div>
-      <div class="nsuc-record-weight">Vacant</div>
-      <div class="nsuc-record-member">&mdash;</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Silver Trevally</div>
+        <div class="nsuc-record-weight">Vacant</div>
+        <div class="nsuc-record-member">&mdash;</div>
+      </div>
     </div>
     <div class="nsuc-record-card nsuc-record-vacant">
       <div class="nsuc-record-photo">
@@ -366,9 +398,11 @@
           <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
         </svg>
       </div>
-      <div class="nsuc-record-species">Yellow Spot Sawtail</div>
-      <div class="nsuc-record-weight">Vacant</div>
-      <div class="nsuc-record-member">&mdash;</div>
+      <div class="nsuc-record-info">
+        <div class="nsuc-record-species">Yellow Spot Sawtail</div>
+        <div class="nsuc-record-weight">Vacant</div>
+        <div class="nsuc-record-member">&mdash;</div>
+      </div>
     </div>
   </div>
 
