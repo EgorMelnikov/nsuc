@@ -47,36 +47,33 @@
   }
 
   .nsuc-records-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
     margin: 1rem 0 2rem;
   }
 
   .nsuc-record-card {
-    background: #f0f7fc;
-    border-left: 4px solid #00558b;
-    border-radius: 6px;
-    padding: 1rem;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #dde6ed;
+  }
+
+  .nsuc-record-card:first-child {
+    border-top: 1px solid #dde6ed;
   }
 
   .nsuc-record-photo {
-    flex: 0 0 160px;
-    height: 110px;
+    flex: 0 0 220px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #dde9f3;
-    border-radius: 4px;
     overflow: hidden;
   }
 
   .nsuc-record-photo svg {
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
   }
 
   .nsuc-record-photo img {
@@ -84,8 +81,6 @@
     height: 100%;
     object-fit: contain;
     filter: grayscale(1);
-    padding: 8px;
-    box-sizing: border-box;
   }
 
   .nsuc-record-info {
@@ -96,7 +91,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #00558b;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 0.25rem;
@@ -104,7 +99,7 @@
 
   .nsuc-record-weight {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 0.1rem;
@@ -112,22 +107,17 @@
 
   .nsuc-record-member {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #555;
   }
 
-  .nsuc-record-vacant .nsuc-record-species {
-    color: #6a8fa8;
+  .nsuc-record-year {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #999;
+    margin-top: 0.1rem;
   }
 
-  .nsuc-record-vacant .nsuc-record-weight,
-  .nsuc-record-vacant .nsuc-record-member {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #aaa;
-    font-style: italic;
-    font-size: 0.95rem;
-    font-weight: normal;
-  }
 
   .nsuc-records p {
     margin: 0 0 1rem;
@@ -140,6 +130,10 @@
     .nsuc-records-grid {
       grid-template-columns: 1fr;
     }
+    .nsuc-record-photo {
+      flex: 0 0 140px;
+      height: 90px;
+    }
   }
 
   .nsuc-records-tony-leslie {
@@ -147,12 +141,21 @@
     border-left: 4px solid #00558b;
     border-radius: 4px;
     padding: 1rem 1.1rem;
-    margin: 1.5rem 0 2rem;
+    margin: 1.5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nsuc-records-tony-leslie .nsuc-record-photo {
+    flex: 0 0 220px;
+    height: 150px;
+    background: transparent;
   }
 
   .nsuc-records-trophy-label {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #00558b;
@@ -161,17 +164,61 @@
   }
 
   .nsuc-records-trophy-fish {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 2rem;
     color: #1a1a1a;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
   }
 
   .nsuc-records-trophy-holder {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
+    font-size: 2rem;
     color: #555;
+  }
+
+  .nsuc-trophy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .nsuc-trophy-table thead tr {
+    background: #00558b;
+    color: #fff;
+  }
+
+  .nsuc-trophy-table thead th {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .nsuc-trophy-table tbody tr {
+    border-bottom: 1px solid #dde6ed;
+  }
+
+  .nsuc-trophy-table tbody tr:nth-child(even) {
+    background: #f0f7fc;
+  }
+
+  .nsuc-trophy-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .nsuc-trophy-table td {
+    padding: 0.65rem 1rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+  }
+
+  .nsuc-trophy-table td:first-child {
+    font-weight: 700;
+    color: #00558b;
   }
 
   .nsuc-records-note {
@@ -207,6 +254,7 @@
         <div class="nsuc-record-species">Kingfish</div>
         <div class="nsuc-record-weight">35 kg</div>
         <div class="nsuc-record-member">P. Sheppard</div>
+        <div class="nsuc-record-year">2018</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -217,6 +265,7 @@
         <div class="nsuc-record-species">Mulloway</div>
         <div class="nsuc-record-weight">34.4 kg</div>
         <div class="nsuc-record-member">A. Moderer</div>
+        <div class="nsuc-record-year">2019</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -227,6 +276,7 @@
         <div class="nsuc-record-species">Cobia</div>
         <div class="nsuc-record-weight">29.95 kg</div>
         <div class="nsuc-record-member">A. Price</div>
+        <div class="nsuc-record-year">2011</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -237,6 +287,7 @@
         <div class="nsuc-record-species">Spanish Mackerel</div>
         <div class="nsuc-record-weight">26.2 kg</div>
         <div class="nsuc-record-member">N. Blyth</div>
+        <div class="nsuc-record-year">2012</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -247,6 +298,7 @@
         <div class="nsuc-record-species">Dolphin Fish</div>
         <div class="nsuc-record-weight">8.8 kg</div>
         <div class="nsuc-record-member">J. Williams</div>
+        <div class="nsuc-record-year">2024</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -257,6 +309,7 @@
         <div class="nsuc-record-species">Snapper</div>
         <div class="nsuc-record-weight">7.3 kg</div>
         <div class="nsuc-record-member">J. Howard</div>
+        <div class="nsuc-record-year">2013</div>
       </div>
     </div>
   </div>
@@ -271,6 +324,7 @@
         <div class="nsuc-record-species">Bonito</div>
         <div class="nsuc-record-weight">5.24 kg</div>
         <div class="nsuc-record-member">A. Scott</div>
+        <div class="nsuc-record-year">2021</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -281,6 +335,7 @@
         <div class="nsuc-record-species">Rock Blackfish</div>
         <div class="nsuc-record-weight">5.15 kg</div>
         <div class="nsuc-record-member">D. Fitzgerald</div>
+        <div class="nsuc-record-year">2000</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -291,6 +346,7 @@
         <div class="nsuc-record-species">Salmon</div>
         <div class="nsuc-record-weight">4.16 kg</div>
         <div class="nsuc-record-member">G. Kroie</div>
+        <div class="nsuc-record-year">2019</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -301,6 +357,7 @@
         <div class="nsuc-record-species">Blue Morwong</div>
         <div class="nsuc-record-weight">3.42 kg</div>
         <div class="nsuc-record-member">C. Maloney</div>
+        <div class="nsuc-record-year">2009</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -311,6 +368,7 @@
         <div class="nsuc-record-species">Red Morwong</div>
         <div class="nsuc-record-weight">2.335 kg</div>
         <div class="nsuc-record-member">M. Walsh</div>
+        <div class="nsuc-record-year">2010</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -321,6 +379,7 @@
         <div class="nsuc-record-species">Red Rock Cod</div>
         <div class="nsuc-record-weight">2.172 kg</div>
         <div class="nsuc-record-member">A. Price</div>
+        <div class="nsuc-record-year">2018</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -331,6 +390,7 @@
         <div class="nsuc-record-species">Luderick</div>
         <div class="nsuc-record-weight">1.938 kg</div>
         <div class="nsuc-record-member">A. Price</div>
+        <div class="nsuc-record-year">2013</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -341,6 +401,7 @@
         <div class="nsuc-record-species">Bream</div>
         <div class="nsuc-record-weight">1.69 kg</div>
         <div class="nsuc-record-member">M. Bonnici</div>
+        <div class="nsuc-record-year">2007</div>
       </div>
     </div>
     <div class="nsuc-record-card">
@@ -351,67 +412,71 @@
         <div class="nsuc-record-species">Goatfish</div>
         <div class="nsuc-record-weight">1.655 kg</div>
         <div class="nsuc-record-member">J. Chan</div>
-      </div>
-    </div>
-    <div class="nsuc-record-card nsuc-record-vacant">
-      <div class="nsuc-record-photo">
-        <svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="28,55 0,28 0,82" fill="#8a9fb5"/>
-          <ellipse cx="118" cy="55" rx="94" ry="40" fill="#6e8fa8"/>
-          <polygon points="78,15 118,0 158,15" fill="#8a9fb5"/>
-          <polygon points="100,72 122,92 152,76" fill="#8a9fb5"/>
-          <circle cx="182" cy="48" r="11" fill="#cddbe8"/>
-          <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
-        </svg>
-      </div>
-      <div class="nsuc-record-info">
-        <div class="nsuc-record-species">Sand Whiting</div>
-        <div class="nsuc-record-weight">Vacant</div>
-        <div class="nsuc-record-member">&mdash;</div>
-      </div>
-    </div>
-    <div class="nsuc-record-card nsuc-record-vacant">
-      <div class="nsuc-record-photo">
-        <svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="28,55 0,28 0,82" fill="#8a9fb5"/>
-          <ellipse cx="118" cy="55" rx="94" ry="40" fill="#6e8fa8"/>
-          <polygon points="78,15 118,0 158,15" fill="#8a9fb5"/>
-          <polygon points="100,72 122,92 152,76" fill="#8a9fb5"/>
-          <circle cx="182" cy="48" r="11" fill="#cddbe8"/>
-          <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
-        </svg>
-      </div>
-      <div class="nsuc-record-info">
-        <div class="nsuc-record-species">Silver Trevally</div>
-        <div class="nsuc-record-weight">Vacant</div>
-        <div class="nsuc-record-member">&mdash;</div>
-      </div>
-    </div>
-    <div class="nsuc-record-card nsuc-record-vacant">
-      <div class="nsuc-record-photo">
-        <svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="28,55 0,28 0,82" fill="#8a9fb5"/>
-          <ellipse cx="118" cy="55" rx="94" ry="40" fill="#6e8fa8"/>
-          <polygon points="78,15 118,0 158,15" fill="#8a9fb5"/>
-          <polygon points="100,72 122,92 152,76" fill="#8a9fb5"/>
-          <circle cx="182" cy="48" r="11" fill="#cddbe8"/>
-          <circle cx="185" cy="48" r="5" fill="#4a6a82"/>
-        </svg>
-      </div>
-      <div class="nsuc-record-info">
-        <div class="nsuc-record-species">Yellow Spot Sawtail</div>
-        <div class="nsuc-record-weight">Vacant</div>
-        <div class="nsuc-record-member">&mdash;</div>
+        <div class="nsuc-record-year">2005</div>
       </div>
     </div>
   </div>
 
   <h2>Tony Leslie Trophy</h2>
   <div class="nsuc-records-tony-leslie">
-    <div class="nsuc-records-trophy-label">All-Time Blue Water Record</div>
-    <div class="nsuc-records-trophy-fish">Black Marlin &mdash; 230 kg</div>
-    <div class="nsuc-records-trophy-holder">A. Moderer</div>
+    <div class="nsuc-record-photo">
+      <img src="https://raw.githubusercontent.com/EgorMelnikov/nsuc/main/nsuc/pics/fish-pics/blue_fin_tuna.png" alt="Blue Fin Tuna">
+    </div>
+    <div>
+      <div class="nsuc-records-trophy-label">All-Time Blue Water Record</div>
+      <div class="nsuc-records-trophy-fish">Blue Fin Tuna &mdash; 122 kg</div>
+      <div class="nsuc-records-trophy-holder">J. Stevens, 2019</div>
+    </div>
   </div>
+
+  <table class="nsuc-trophy-table">
+    <thead>
+      <tr>
+        <th>Species</th>
+        <th>Weight</th>
+        <th>Member</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Blue Fin Tuna</td>
+        <td>122 kg</td>
+        <td>J. Stevens</td>
+        <td>2019</td>
+      </tr>
+      <tr>
+        <td>Striped Marlin</td>
+        <td>94.2 kg</td>
+        <td>J. Stevens</td>
+        <td>2013</td>
+      </tr>
+      <tr>
+        <td>Dogtooth Tuna</td>
+        <td>82 kg</td>
+        <td>B. McComb</td>
+        <td>1997</td>
+      </tr>
+      <tr>
+        <td>Wahoo</td>
+        <td>50 kg</td>
+        <td>A. Boler</td>
+        <td>2006</td>
+      </tr>
+      <tr>
+        <td>White Marlin</td>
+        <td>38.3 kg</td>
+        <td>B. McComb</td>
+        <td>2018</td>
+      </tr>
+      <tr>
+        <td>Dolphin Fish</td>
+        <td>18.6 kg</td>
+        <td>S. Hutton</td>
+        <td>2015</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="nsuc-records-note">
     <p>Records are all-time bests from NSUC club competition history. Vacant categories have no prior recorded history.</p>
